@@ -2,6 +2,7 @@ import React from 'react'
 import { Navbar } from './Navbar.jsx'
 import { albumsData, songsData } from '../assets/assets.js'
 import AlbumItem from './AlbumItem.jsx'
+import SongItem from './SongItem.jsx'
 const DisplayHome = () => {
   return (
   <>
@@ -18,7 +19,7 @@ const DisplayHome = () => {
       <h1 className='my-5 font-bold text-2xl'>Today's biggest hit</h1>
       <div className='flex overflow-auto'>
             {
-              // songsData.map((item,index)=>(<AlbumItem key={index} name={item.name} desc={item.desc} id={item.id} image={item.image} />))
+             songsData.map((item,index)=>(<SongItem key={index} name={item.name} desc={item.desc} id={item.id} image={item.image} />))
             }
       </div>
     </div>
