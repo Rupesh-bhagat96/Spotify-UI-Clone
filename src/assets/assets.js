@@ -48,6 +48,8 @@ import pod4 from './pod4.jpg'
 import pod5 from './pod5.jpg'
 import pod6 from './pod6.jpg'
 import pod7 from './pod7.jpg'
+import pods1 from './pods1.m4a'
+import pods2 from './pods2.m4a'
 
 
 export const assets = {
@@ -191,7 +193,7 @@ export const songsData = [
         id:8,
         name: "The Ranveer Show",
         image: pod1,
-        file:song2,
+        file:pods1,
         desc:"Ranveer Allahbadia aka BeerBiceps brings you #TheRanveerShow",
         duration:"2:35"
     },
@@ -199,7 +201,7 @@ export const songsData = [
         id:9,
         name: "Nitish Rajput Podcast",
         image: pod2,
-        file:song2,
+        file:pods2,
         desc:"Nitish Rajput firmly believes that there...",
         duration:"2:35"
     },
@@ -235,14 +237,6 @@ export const songsData = [
         file:song3,
         desc:"The next 10 years is going to be Golden ...",
         duration:"2:45"
-    }
-    ,{
-        id:14,
-        name: "The Krishna Geeta Vani",
-        image: pod7,
-        file:song1,
-        desc:"The Krishna Geeta Vani is a unique and insight...",
-        duration:"2:18"
     }
 ]
 
