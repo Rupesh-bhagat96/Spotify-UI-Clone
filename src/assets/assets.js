@@ -41,6 +41,14 @@ import img16 from './img16.jpg'
 import song1 from  './song1.mp3'
 import song2 from  './song2.mp3'
 import song3 from  './song3.mp3'
+import pod1 from './pod1.jpg'
+import pod2 from './pod2.jpg'
+import pod3 from './pod3.jpg'
+import pod4 from './pod4.jpg'
+import pod5 from './pod5.jpg'
+import pod6 from './pod6.jpg'
+import pod7 from './pod7.jpg'
+
 
 export const assets = {
     bell_icon,
@@ -178,5 +186,123 @@ export const songsData = [
         file:song2,
         desc:"Put a smile on your face with these happy tunes",
         duration:"2:35"
+    },
+    {
+        id:8,
+        name: "The Ranveer Show",
+        image: pod1,
+        file:song2,
+        desc:"Ranveer Allahbadia aka BeerBiceps brings you #TheRanveerShow",
+        duration:"2:35"
+    },
+    {
+        id:9,
+        name: "Nitish Rajput Podcast",
+        image: pod2,
+        file:song2,
+        desc:"Nitish Rajput firmly believes that there...",
+        duration:"2:35"
+    },
+    {
+        id:10,
+        name: "Ashtavakra Geeta By Osho",
+        image: pod3,
+        file:song2,
+        desc:"A series of 91 discourses Ashtavakra Maha Geet...",
+        duration:"2:35"
     }
+    ,
+    {
+        id:11,
+        name: "Premanand Ji Maharaj",
+        image: pod4,
+        file:song1,
+        desc:"प्रणाम भारत मैं आपके लिए आध्यात्मिक कहानियां धर्म... ",
+        duration:"2:50"
+    },
+    {
+        id:12,
+        name: "The Stories Of MahaBharata",
+        image: pod5,
+        file:song2,
+        desc:"Ganga, Devabrata and Shantanu The first ...",
+        duration:"3:10"
+    },
+    {
+        id:13,
+        name: "Figuring out with Raj Shamani",
+        image: pod6,
+        file:song3,
+        desc:"The next 10 years is going to be Golden ...",
+        duration:"2:45"
+    }
+    ,{
+        id:14,
+        name: "The Krishna Geeta Vani",
+        image: pod7,
+        file:song1,
+        desc:"The Krishna Geeta Vani is a unique and insight...",
+        duration:"2:18"
+    }
+]
+
+// podcastdata
+export const podCastData = [
+    {
+        id:8,
+        name: "The Ranveer Show",
+        image: pod1,
+        file:song1,
+        desc:"Ranveer Allahbadia aka BeerBiceps brings you #TheRanveerShow",
+        duration:"3:00"
+    },
+    {
+        id:9,
+        name: "Nitish Rajput Podcast",
+        image: pod2,
+        file:song2,
+        desc:"Nitish Rajput firmly believes that there... ",
+        duration:"2:20"
+    },
+    {
+        id:10,
+        name: "Ashtavakra Geeta By Osho",
+        image: pod3,
+        file:song3,
+        desc:"A series of 91 discourses Ashtavakra Maha Geet...",
+        duration:"2:32"
+    },
+    {
+        id:11,
+        name: "Premanand Ji Maharaj",
+        image: pod4,
+        file:song1,
+        desc:"प्रणाम भारत मैं आपके लिए आध्यात्मिक कहानियां धर्म... ",
+        duration:"2:50"
+    },
+    {
+        id:12,
+        name: "The Stories Of MahaBharata",
+        image: pod5,
+        file:song2,
+        desc:"Ganga, Devabrata and Shantanu The first ...",
+        duration:"3:10"
+    },
+    {
+        id:13,
+        name: "Figuring out with Raj Shamani",
+        image: pod6,
+        file:song3,
+        desc:"The next 10 years is going to be Golden ...",
+        duration:"2:45"
+    },
+    {
+        id:14,
+        name: "The Krishna Geeta Vani",
+        image: pod7,
+        file:song1,
+        desc:"The Krishna Geeta Vani is a unique and insight...",
+        duration:"2:18"
+    }
+   
 ]

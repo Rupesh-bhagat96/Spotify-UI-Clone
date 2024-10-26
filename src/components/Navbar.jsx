@@ -1,9 +1,12 @@
 import React from 'react'
 import { assets } from '../assets/assets'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate, Link } from 'react-router-dom'
 
 export const Navbar = () => {
   const Navigate = useNavigate()
+  const path =useLocation().pathname
+  const isAlbumActive =  path.includes("album")
+  
   return (
     <>
       <div className='w-full flex justify-between items-center font-semibold'>
@@ -18,9 +21,12 @@ export const Navbar = () => {
         </div>
       </div>
       <div className='flex items-center gap-2 mt-4'>
-        <p className='bg-white text-black px-4 py-1 rounded-2xl cursor-pointer'>All</p>
-        <p className=' bg-black px-4 py-1 rounded-2xl cursor-pointer'>Music</p>
-        <p className=' bg-black px-4 py-1 rounded-2xl cursor-pointer'>Podcasts</p>
+        <p className={path==="/"?'bg-white text-black px-4 py-1 rounded-2xl cursor-pointer' : 'bg-black px-4 py-1 rounded-2xl cursor-pointer' }><Link to="/"> All</Link></p>
+        <p className={path==="/music"?'bg-white text-black px-4 py-1 rounded-2xl cursor-pointer' : 'bg-black px-4 py-1 rounded-2xl cursor-pointer'}><Link to="/music"> Music </Link></p>
+          {
+            isAlbumActive?<p className='bg-white text-black px-4 py-1 rounded-2xl cursor-pointer'> Album </p> :""
+          }
+        <p className={path==="/podcast"?'bg-white text-black px-4 py-1 rounded-2xl cursor-pointer' : 'bg-black px-4 py-1 rounded-2xl cursor-pointer' }><Link to="/podcast"> Podcast</Link></p>
       </div>
     </>
   )
