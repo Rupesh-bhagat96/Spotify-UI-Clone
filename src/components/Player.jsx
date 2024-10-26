@@ -1,9 +1,10 @@
 import React, { useContext } from 'react'
 import { assets, songsData } from '../assets/assets'
 import { PlayerContext } from '../contex/PlayerContext'
+
 const Player = () => {
 
-    const { seekBg, seekBar, playStatus, play, pause, track, time, previous, next } = useContext(PlayerContext)
+    const { seekBg, seekBar, playStatus, play, pause, track, time, previous, next, volume, setVolume, audioChange } = useContext(PlayerContext)
 
     return (
         <div className='fixed bottom-0 left-0 right-0 h-[10%] bg-black flex justify-between items-center text-white px-4'>
@@ -34,13 +35,14 @@ const Player = () => {
                     <p>{time.totalTime.minute }:{ time.totalTime.second}</p>
                 </div>
             </div>
+            
             <div className='hidden lg:flex items-center gap-2 opacity-75'>
                 <img className='w-4' src={assets.play_icon} alt="" />
                 <img className='w-4' src={assets.mic_icon} alt="" />
                 <img className='w-4' src={assets.queue_icon} alt="" />
                 <img className='w-4' src={assets.speaker_icon} alt="" />
                 <img className='w-4' src={assets.volume_icon} alt="" />
-                <div className='w-20 bg-slate-50 h-1 rounded'></div>
+                <input type="range" step={0.1} min={0} max={1} value={volume} onChange={(e)=>audioChange(e)} className='w-20 bg-slate-50 h-1 rounded cursor-pointer'  />
                 <img className='w-4' src={assets.mini_player_icon} alt="" />
                 <img className='w-4' src={assets.zoom_icon} alt="" />
 

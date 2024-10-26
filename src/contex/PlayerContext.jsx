@@ -10,6 +10,7 @@ const PlayerContextProvider = ({ children }) => {
 
   const [track, setTrack] = useState(songsData[0]);
   const [playStatus, setPlayStatus] = useState(false);
+  const[volume, setVolume] = useState(0.7)
   const [time, SetTime] = useState({
     currentTime: {
       second: 0,
@@ -52,6 +53,11 @@ const PlayerContextProvider = ({ children }) => {
     setPlayStatus(true)
     }
   }
+  const audioChange = (e)=>{
+   setVolume(e.target.value)
+   const newVolume = e.target.value
+   audioRef.current.volume=newVolume
+  }
 
   useEffect(()=>{
     audioRef.current.ontimeupdate = () =>{
@@ -81,7 +87,9 @@ const PlayerContextProvider = ({ children }) => {
     play,pause,
     playById,
     previous,
-    next
+    next,
+    volume, setVolume,
+    audioChange
   };
 
   return (
